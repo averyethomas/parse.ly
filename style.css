@@ -39,31 +39,17 @@
           margin: 0;
           padding: 0 5px;
           transition: all 0.3s ease-in;
-          position: relative; }
-          .trending .post a .number h6:after {
-            content: '';
-            height: 10px;
-            position: absolute;
-            width: 50px;
-            background: #f75a38;
-            bottom: 7px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            display: block;
-            z-index: -1;
-            transition: all 0.3s ease-in; }
-      .trending .post a .postsInfo {
-        padding: 7px 0 0; }
-        .trending .post a .postsInfo h5 {
-          transition: all 0.3s ease-in; }
-      .trending .post a:hover {
-        cursor: pointer;
+          position: relative;
+          box-shadow: inset 0 -7px 0 #f75a38; }
+      .trending .post a .postsInfo h5 {
+        transition: all 0.3s ease-in; }
+      .trending .post a:hover, .trending .post a:active, .trending .post a:focus, .trending .post a:focus-within, .trending .post a:visited {
         box-shadow: none; }
+      .trending .post a:hover {
+        cursor: pointer; }
         .trending .post a:hover .number h6 {
-          color: white; }
-          .trending .post a:hover .number h6:after {
-            height: 40px;
-            opacity: 1; }
+          color: white;
+          box-shadow: inset 0 -55px 0 #f75a38; }
         .trending .post a:hover .postsInfo h5 {
           color: #f75a38; }
 
