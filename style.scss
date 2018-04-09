@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:700|Roboto+Condensed:400');
+
+$header: 'Noto Serif', Georgia, serif;
+$sans-serif: 'Roboto Condensed', sans-serif;;
+
+// COLORS
+
+$dark: #000;
+$light: #939385;
+$highlight: #f75a38;
+
+.trending {
+    padding: 0 15px;
+    
+    h5, h6 {
+        font-family: $header;
+        color: $dark;
+    }
+    h4 {
+        font-family: $sans-serif;
+        font-size: 24px;
+        margin: 0 auto 15px;
+        text-transform: uppercase;
+        border-bottom: 5px solid $light;
+        color: $light;
+        letter-spacing: 2px;
+        padding: 0 0 2px;
+    }
+    h5 {
+        font-size: 22px;
+        margin: 0 auto 5px;
+    }
+    
+    p {
+        font-family: $sans-serif;
+        color: $light;
+        margin: 0 auto 10px;
+    }
+    a {
+        color: $dark;
+        text-decoration: none;
+    }
+    .post {
+        width: 100%;
+        a {
+           display: flex;
+           margin: 0 auto 10px;
+           
+           .number {
+                margin: 0 5px;
+                
+                h6 {
+                    font-size: 40px;
+                    margin: 0;
+                    padding: 0 5px;
+                    transition: all 0.3s ease-in;
+                    position: relative;
+    
+                    
+                    &:after {
+                        content: '';
+                        height: 10px;
+                        position: absolute;
+                        width: 50px;
+                        background: $highlight;
+                        bottom: 7px;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        display: block;
+                        z-index: -1;
+                        transition: all 0.3s ease-in;
+                    }
+                }
+            }
+            .postsInfo {
+                padding: 7px 0 0;
+                
+                h5 {
+                    transition: all 0.3s ease-in;
+                }
+            }
+           
+            &:hover {
+                cursor: pointer;
+                
+                .number {
+                    h6 {
+                        color: white;
+                        
+                        &:after {
+                            height: 40px;
+                            //bottom: 45px;
+                            opacity: 1;
+                        }
+                    }
+                }
+                
+                .postsInfo {
+                    h5 {
+                        color: $highlight;
+                    }
+                }
+            }
+            
+        }
+
+    }
+}

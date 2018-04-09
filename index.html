@@ -3,15 +3,27 @@
     <head>
         <title>Parse.ly</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--STYLES-->
+        <link href="style.css" rel="stylesheet">    
         <!--JAVASCRIPT-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js" type="text/javascript"></script>
-        <script src="scripts/app.js" type="text/javascript"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+        <script src="scripts/app.js"></script> 
     </head>
     <body data-ng-app="angularApp">
-        <h1>Test Header</h1>
-        <div data-ng-controller="parselyCtrl">
-            
+        <div class="trending" data-ng-controller="parselyCtrl">
+            <h4>Trending</h4>
+            <div class="post" data-ng-repeat="post in topPosts track by $index">
+                <a data-ng-href="{{ post.link }}">
+                    <div class="number">
+                        <h6>{{ ("0"+ ($index + 1)).slice(-2) }}</h6>
+                    </div>
+                    <div class="postsInfo">
+                        <h5>{{ post.title }}</h5>
+                        <p>By {{ post.author }}</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </body>
 </html>
