@@ -15,10 +15,9 @@ app.controller('parselyCtrl', ['$scope', '$http', function ($scope, $http) {
         }).
             success(function(data, status, headers, config){
                 $scope.topPosts = data.data;
-                console.log($scope.topPosts);
         }).
             error(function(data, status, headers, config){
-                console.log('error');
+                console.log('There was an error. No posts available.');
             });
     };
     

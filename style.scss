@@ -29,12 +29,15 @@ $highlight: #f75a38;
     h5 {
         font-size: 22px;
         margin: 0 auto 5px;
+        letter-spacing: 0;
+        text-transform: none;
     }
     
     p {
         font-family: $sans-serif;
         color: $light;
         margin: 0 auto 10px;
+        font-size: 14px;
     }
     a {
         color: $dark;
@@ -45,6 +48,7 @@ $highlight: #f75a38;
         a {
            display: flex;
            margin: 0 auto 10px;
+           box-shadow: none;
            
            .number {
                 margin: 0 5px;
@@ -82,7 +86,8 @@ $highlight: #f75a38;
            
             &:hover {
                 cursor: pointer;
-                
+                box-shadow: none;
+
                 .number {
                     h6 {
                         color: white;
