@@ -40,7 +40,7 @@ class tm_top_posts extends WP_Widget {
         
         ?>
         
-        <div class="trending" ng-cloak data-ng-app="angularApp" data-ng-controller="parselyCtrl">
+        <div class="trending" data-ng-cloak data-ng-app="angularApp" data-ng-controller="parselyCtrl">
             <h4>Trending</h4>
             <div class="post" data-ng-repeat="post in topPosts track by $index">
                 <a data-ng-href="{{ post.link }}">
